@@ -1,0 +1,103 @@
+.pin-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.pin-input-wrapper {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.pin-digit {
+  width: 50px;
+  height: 60px;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(0, 255, 65, 0.3);
+  border-radius: 12px;
+  color: #00ff41;
+  transition: all 0.2s ease;
+  outline: none;
+  font-family: 'Courier New', monospace;
+}
+
+.pin-digit:focus {
+  border-color: #00ff41;
+  background: rgba(0, 255, 65, 0.1);
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+  transform: scale(1.05);
+}
+
+.pin-digit.filled {
+  background: rgba(0, 255, 65, 0.15);
+  border-color: #00ff41;
+}
+
+.pin-digit.error {
+  border-color: #ff4444;
+  animation: shake 0.4s ease;
+}
+
+.pin-digit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}
+
+.pin-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ff4444;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 16px;
+  background: rgba(255, 68, 68, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 68, 68, 0.3);
+}
+
+.error-icon {
+  font-size: 18px;
+}
+
+.clear-pin-btn {
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.clear-pin-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+@media (max-width: 500px) {
+  .pin-digit {
+    width: 45px;
+    height: 55px;
+    font-size: 24px;
+  }
+  
+  .pin-input-wrapper {
+    gap: 8px;
+  }
+}
