@@ -1,0 +1,80 @@
+.restore-wallet-screen {
+  min-height: 100vh;
+  background: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.restore-wallet-container {
+  max-width: 700px;
+  width: 100%;
+  background: linear-gradient(135deg, rgba(0, 20, 10, 0.8) 0%, rgba(0, 10, 5, 0.9) 100%);
+  border: 2px solid rgba(0, 255, 65, 0.3);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 40px rgba(0, 255, 65, 0.1);
+}
+
+.seed-phrase-input-container {
+  margin: 20px 0;
+}
+
+.seed-phrase-input-container label {
+  display: block;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.seed-phrase-textarea {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(0, 255, 65, 0.3);
+  border-radius: 12px;
+  padding: 16px;
+  color: #00ff41;
+  font-size: 16px;
+  font-family: 'Courier New', monospace;
+  line-height: 1.6;
+  resize: vertical;
+  outline: none;
+  transition: all 0.2s ease;
+  min-height: 120px;
+}
+
+.seed-phrase-textarea:focus {
+  border-color: #00ff41;
+  background: rgba(0, 255, 65, 0.05);
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+}
+
+.seed-phrase-textarea::placeholder {
+  color: rgba(0, 255, 65, 0.4);
+}
+
+.input-hint {
+  margin-top: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.recovered-address {
+  margin: 25px 0;
+}
+
+.recovered-address label {
+  display: block;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .restore-wallet-container {
+    padding: 30px 20px;
+  }
+}

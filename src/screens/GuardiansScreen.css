@@ -1,0 +1,370 @@
+.guardians-screen {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  color: #00ff00;
+  padding: 20px;
+}
+
+.guardians-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.guardians-header h1 {
+  font-size: 28px;
+  margin: 0;
+  color: #00ff00;
+}
+
+.back-btn {
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid #00ff00;
+  color: #00ff00;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: rgba(0, 255, 0, 0.2);
+  transform: translateX(-2px);
+}
+
+.guardians-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.guardians-info {
+  background: rgba(0, 255, 0, 0.05);
+  border: 1px solid rgba(0, 255, 0, 0.3);
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.info-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.guardians-info h2 {
+  color: #00ff00;
+  margin: 0 0 15px 0;
+  font-size: 22px;
+}
+
+.guardians-info p {
+  color: rgba(0, 255, 0, 0.8);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.guardians-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-item {
+  background: rgba(0, 255, 0, 0.05);
+  border: 1px solid rgba(0, 255, 0, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 36px;
+  font-weight: bold;
+  color: #00ff00;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  color: rgba(0, 255, 0, 0.7);
+  font-size: 14px;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: rgba(0, 255, 0, 0.7);
+  font-size: 16px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(0, 255, 0, 0.03);
+  border: 1px dashed rgba(0, 255, 0, 0.3);
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.empty-state p {
+  margin: 10px 0;
+  color: rgba(0, 255, 0, 0.8);
+}
+
+.empty-hint {
+  color: rgba(0, 255, 0, 0.6);
+  font-size: 14px;
+}
+
+.guardians-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.guardian-card {
+  background: rgba(0, 255, 0, 0.05);
+  border: 1px solid rgba(0, 255, 0, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.guardian-card:hover {
+  background: rgba(0, 255, 0, 0.08);
+  border-color: #00ff00;
+}
+
+.guardian-info {
+  flex: 1;
+}
+
+.guardian-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.guardian-header h3 {
+  margin: 0;
+  color: #00ff00;
+  font-size: 18px;
+}
+
+.verified-badge {
+  background: rgba(0, 255, 0, 0.2);
+  color: #00ff00;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.unverified-badge {
+  background: rgba(255, 165, 0, 0.2);
+  color: #ffa500;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.guardian-relationship {
+  color: rgba(0, 255, 0, 0.7);
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.guardian-contact {
+  color: rgba(0, 255, 0, 0.6);
+  font-size: 13px;
+  margin: 3px 0;
+}
+
+.guardian-date {
+  color: rgba(0, 255, 0, 0.5);
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.guardian-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.verify-btn,
+.remove-btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.verify-btn {
+  background: rgba(0, 255, 0, 0.1);
+  border-color: #00ff00;
+  color: #00ff00;
+}
+
+.verify-btn:hover {
+  background: rgba(0, 255, 0, 0.2);
+}
+
+.remove-btn {
+  background: rgba(255, 0, 0, 0.1);
+  border-color: #ff0000;
+  color: #ff0000;
+}
+
+.remove-btn:hover {
+  background: rgba(255, 0, 0, 0.2);
+}
+
+.add-guardian-btn {
+  width: 100%;
+  padding: 16px;
+  background: rgba(0, 255, 0, 0.1);
+  border: 2px dashed #00ff00;
+  color: #00ff00;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-guardian-btn:hover {
+  background: rgba(0, 255, 0, 0.2);
+  border-style: solid;
+}
+
+.add-guardian-form {
+  background: rgba(0, 255, 0, 0.05);
+  border: 1px solid rgba(0, 255, 0, 0.3);
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.add-guardian-form h3 {
+  color: #00ff00;
+  margin: 0 0 20px 0;
+  font-size: 20px;
+}
+
+.form-error {
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid #ff0000;
+  color: #ff0000;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  color: #00ff00;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 255, 0, 0.3);
+  border-radius: 8px;
+  color: #00ff00;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #00ff00;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.form-group input::placeholder {
+  color: rgba(0, 255, 0, 0.4);
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.submit-btn,
+.cancel-btn {
+  flex: 1;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.submit-btn {
+  background: rgba(0, 255, 0, 0.2);
+  border-color: #00ff00;
+  color: #00ff00;
+}
+
+.submit-btn:hover {
+  background: rgba(0, 255, 0, 0.3);
+}
+
+.cancel-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.cancel-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .guardians-screen {
+    padding: 15px;
+  }
+
+  .guardians-header h1 {
+    font-size: 24px;
+  }
+
+  .guardian-card {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .guardian-actions {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .verify-btn,
+  .remove-btn {
+    flex: 1;
+  }
+}
