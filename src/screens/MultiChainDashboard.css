@@ -1,0 +1,501 @@
+/* MultiChainDashboard.css */
+
+.multichain-dashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+  color: #e0e0e0;
+  padding: 20px;
+  padding-bottom: 80px;
+}
+
+/* Loading & Error States */
+.multichain-dashboard.loading,
+.multichain-dashboard.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(0, 255, 65, 0.2);
+  border-top: 4px solid #00ff41;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 15px;
+  background: rgba(0, 255, 65, 0.05);
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  border-radius: 10px;
+}
+
+.header-left h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #00ff41;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.header-left .tagline {
+  display: block;
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+}
+
+.header-right {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-icon {
+  background: transparent;
+  border: 1px solid rgba(0, 255, 65, 0.3);
+  color: #00ff41;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.btn-icon:hover {
+  background: rgba(0, 255, 65, 0.1);
+  border-color: #00ff41;
+  transform: scale(1.05);
+}
+
+/* Portfolio Summary */
+.portfolio-summary {
+  background: linear-gradient(135deg, rgba(0, 255, 65, 0.1) 0%, rgba(0, 100, 255, 0.1) 100%);
+  border: 2px solid rgba(0, 255, 65, 0.3);
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.total-value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.total-value .label {
+  font-size: 14px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.total-value .value {
+  font-size: 48px;
+  font-weight: bold;
+  color: #00ff41;
+  text-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
+}
+
+.total-value .currency {
+  font-size: 16px;
+  color: #888;
+  margin-top: 5px;
+}
+
+.portfolio-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #888;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00ff41;
+}
+
+/* Chain Selector */
+.chain-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.chain-btn {
+  flex-shrink: 0;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  color: #e0e0e0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.chain-btn:hover {
+  background: rgba(0, 255, 65, 0.1);
+  border-color: rgba(0, 255, 65, 0.3);
+}
+
+.chain-btn.active {
+  background: rgba(0, 255, 65, 0.2);
+  border-color: #00ff41;
+  color: #00ff41;
+}
+
+/* Chain Summaries */
+.chain-summaries {
+  margin-bottom: 30px;
+}
+
+.chain-summaries h2 {
+  font-size: 20px;
+  color: #00ff41;
+  margin-bottom: 15px;
+  padding-left: 5px;
+}
+
+.chain-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.chain-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.chain-card:hover {
+  background: rgba(0, 255, 65, 0.05);
+  border-color: rgba(0, 255, 65, 0.3);
+  transform: translateY(-2px);
+}
+
+.chain-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.chain-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+.chain-symbol {
+  font-size: 14px;
+  color: #00ff41;
+  background: rgba(0, 255, 65, 0.1);
+  padding: 3px 8px;
+  border-radius: 5px;
+}
+
+.chain-card-body {
+  margin-bottom: 15px;
+}
+
+.chain-balance {
+  font-size: 18px;
+  color: #e0e0e0;
+  margin-bottom: 5px;
+}
+
+.chain-value {
+  font-size: 14px;
+  color: #888;
+}
+
+.chain-card-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 10px;
+}
+
+.asset-count {
+  font-size: 12px;
+  color: #888;
+}
+
+/* Assets Section */
+.assets-section {
+  margin-bottom: 30px;
+}
+
+.assets-section h2 {
+  font-size: 20px;
+  color: #00ff41;
+  margin-bottom: 15px;
+  padding-left: 5px;
+}
+
+.assets-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.asset-item {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.asset-item:hover {
+  background: rgba(0, 255, 65, 0.05);
+  border-color: rgba(0, 255, 65, 0.3);
+}
+
+.asset-icon {
+  flex-shrink: 0;
+  margin-right: 15px;
+}
+
+.icon-placeholder {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00ff41 0%, #0064ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+.asset-info {
+  flex-grow: 1;
+}
+
+.asset-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin-bottom: 5px;
+}
+
+.asset-chain-badge {
+  display: inline-block;
+  font-size: 11px;
+  color: #00ff41;
+  background: rgba(0, 255, 65, 0.1);
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-left: 8px;
+}
+
+.asset-address {
+  font-size: 12px;
+  color: #888;
+  font-family: 'Courier New', monospace;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-copy-small {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 2px;
+  transition: transform 0.2s ease;
+}
+
+.btn-copy-small:hover {
+  transform: scale(1.2);
+}
+
+.asset-balance {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.balance-amount {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin-bottom: 3px;
+}
+
+.balance-value {
+  font-size: 14px;
+  color: #00ff41;
+}
+
+.no-assets {
+  text-align: center;
+  padding: 40px;
+  color: #888;
+}
+
+/* Quick Actions */
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.action-btn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.action-btn:not(:disabled):hover {
+  background: rgba(0, 255, 65, 0.1);
+  border-color: rgba(0, 255, 65, 0.3);
+  transform: translateY(-2px);
+}
+
+.action-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.action-icon {
+  font-size: 32px;
+}
+
+.action-label {
+  font-size: 14px;
+  color: #e0e0e0;
+}
+
+.coming-soon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 10px;
+  color: #00ff41;
+  background: rgba(0, 255, 65, 0.2);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* Dashboard Footer */
+.dashboard-footer {
+  text-align: center;
+  padding: 20px;
+  color: #888;
+  font-size: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.update-time {
+  margin-bottom: 5px;
+}
+
+.wallet-id {
+  font-family: 'Courier New', monospace;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .multichain-dashboard {
+    padding: 15px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .header-left h1 {
+    font-size: 24px;
+  }
+
+  .total-value .value {
+    font-size: 36px;
+  }
+
+  .chain-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .asset-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .asset-icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .asset-balance {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+/* Buttons */
+.btn-refresh {
+  background: #00ff41;
+  color: #000;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-refresh:hover {
+  background: #00cc33;
+  transform: scale(1.05);
+}
