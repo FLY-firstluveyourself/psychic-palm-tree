@@ -1,0 +1,271 @@
+.create-wallet-screen {
+  min-height: 100vh;
+  background: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.create-wallet-container {
+  max-width: 700px;
+  width: 100%;
+  background: linear-gradient(135deg, rgba(0, 20, 10, 0.8) 0%, rgba(0, 10, 5, 0.9) 100%);
+  border: 2px solid rgba(0, 255, 65, 0.3);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 40px rgba(0, 255, 65, 0.1);
+}
+
+.step-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.app-title {
+  font-size: 48px;
+  color: #00ff41;
+  text-align: center;
+  margin: 0;
+  font-weight: 700;
+  text-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
+}
+
+.app-subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  margin: 0;
+}
+
+h2 {
+  font-size: 32px;
+  color: #00ff41;
+  margin: 0;
+  text-align: center;
+}
+
+.step-description {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.welcome-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  text-align: center;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #00ff41 0%, #00cc33 100%);
+  color: #000000;
+}
+
+.primary-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 255, 65, 0.4);
+}
+
+.primary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 2px solid rgba(0, 255, 65, 0.5);
+  color: #00ff41;
+}
+
+.secondary-btn:hover {
+  background: rgba(0, 255, 65, 0.1);
+  border-color: #00ff41;
+}
+
+.primary-btn.large,
+.secondary-btn.large {
+  padding: 20px 40px;
+  font-size: 18px;
+}
+
+.info-box {
+  background: rgba(0, 255, 65, 0.05);
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.info-box.small {
+  padding: 15px;
+}
+
+.info-box p {
+  margin: 8px 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+.address-display {
+  margin: 20px 0;
+}
+
+.address-display label {
+  display: block;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.address-box {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 255, 65, 0.3);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: #00ff41;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  word-break: break-all;
+  text-align: center;
+}
+
+.verification-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.verification-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.verification-input-group label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.word-input {
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(0, 255, 65, 0.3);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: #00ff41;
+  font-size: 16px;
+  font-family: 'Courier New', monospace;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.word-input:focus {
+  border-color: #00ff41;
+  background: rgba(0, 255, 65, 0.05);
+}
+
+.error-message {
+  background: rgba(255, 68, 68, 0.1);
+  border: 1px solid rgba(255, 68, 68, 0.3);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: #ff4444;
+  text-align: center;
+  font-weight: 500;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.button-group .primary-btn,
+.button-group .secondary-btn {
+  flex: 1;
+}
+
+.success-icon {
+  font-size: 72px;
+  text-align: center;
+  animation: successPop 0.5s ease;
+}
+
+@keyframes successPop {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.success-info {
+  background: rgba(0, 255, 65, 0.05);
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.success-info p {
+  margin: 0 0 10px 0;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+.loading-spinner {
+  text-align: center;
+  color: #00ff41;
+  font-weight: 500;
+  animation: pulse 1.5s ease infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 768px) {
+  .create-wallet-container {
+    padding: 30px 20px;
+  }
+
+  .app-title {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .primary-btn.large,
+  .secondary-btn.large {
+    padding: 16px 32px;
+    font-size: 16px;
+  }
+}
